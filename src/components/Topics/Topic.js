@@ -1,7 +1,7 @@
 import React from 'react';
 import './Topic.css';
 
-
+import { Link } from 'react-router-dom';
 const Topic = ({topic}) => {
     const { id,name,logo,total } = topic;
     return (
@@ -12,7 +12,7 @@ const Topic = ({topic}) => {
          <div className="card-body">
            <h5 className="card-title">{name}</h5>
            <p className="card-text">Number of Questions {total}</p>
-          <a href="#" className="btn btn-primary">Start Now</a>
+           <Link className="btn btn-primary w-75" to={`/quizes/${id}`}>Start Now</Link>
         </div>
          </div>
      </div>
