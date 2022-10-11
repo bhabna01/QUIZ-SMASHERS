@@ -8,7 +8,7 @@ const Topic = ({topic}) => {
         <div >
             
         <div className="card ">
-        <img src={logo} class="card-img-top" alt="..."></img>
+        <img src={logo} className="card-img-top bg-dark" alt="..."></img>
          <div className="card-body">
            <h5 className="card-title">{name}</h5>
            <p className="card-text">Number of Questions {total}</p>
