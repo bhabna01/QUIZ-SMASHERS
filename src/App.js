@@ -3,8 +3,9 @@ import './App.css';
 import Statistics from './components/Statistics/Statistics';
 import Main from './layouts/Main';
 import Blog from './components/Blog/Blog';
-import Courses from './components/Courses/Courses';
+
 import Home from './components/Home/Home';
+import Quizes from './components/Quizes/Quizes';
 
 
 function App() {
@@ -18,12 +19,15 @@ function App() {
         element:<Home></Home>
       },
       {
-        path:'/courses',
-        loader: async () => {
-          return fetch('https://openapi.programming-hero.com/api/quiz/1');
+        // path:'/quizes',
+        // loader: async () => {
+        //   return fetch('https://openapi.programming-hero.com/api/quiz/1');
        
+        path: '/quizes/:id',
+        loader: async ({ params }) => {
+          return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
       },
-      element:<Courses></Courses>
+      element:<Quizes></Quizes>
     },
       {
         path:'/statistics',
