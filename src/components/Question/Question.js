@@ -2,15 +2,17 @@ import React from "react";
 import Option from "../Option/Option";
 import './Question.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye } from '@fortawesome/free-solid-svg-icons'
+import { faEye, faTowerBroadcast } from '@fortawesome/free-solid-svg-icons'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
 const Question = ({ question }) => {
-    const { options } = question;
+    const wave = () => toast('Hi there')
+    const { options, total } = question;
     console.log(question);
-    console.log(question.length);
-  const lastDigit = question.id.slice(question.id.length - 1);
-  const quizNo = parseInt(lastDigit);
-  console.log(quizNo);
-//   const ques= question.question.slice (3, -4)
+    console.log(total);
+
+
   
   const ques=question.question.replace( /(<([^>]+)>)/ig, '');
   
@@ -18,7 +20,11 @@ const Question = ({ question }) => {
     <div className="container question w-50" >
       
           <div className="d-flex question-info" >
-          <h4> {ques}</h4>  <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+          <h4> {ques}</h4> 
+          {/*  */}
+          <button onClick={wave}><FontAwesomeIcon  icon={faEye}></FontAwesomeIcon></button>
+          <ToastContainer />
+      
             </div>
             
               <div className="option-container">
