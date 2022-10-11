@@ -13,15 +13,18 @@ function App() {
       path:'/',
       element:<Main></Main>,
       children:[{
-        path:'/home',
-        // loader: ()=>fetch('products.json'),
+        path:'/',
+        loader: ()=>fetch('https://openapi.programming-hero.com/api/quiz'),
         element:<Home></Home>
       },
       {
         path:'/courses',
+        loader: async () => {
+          return fetch('https://openapi.programming-hero.com/api/quiz/1');
        
-        element:<Courses></Courses>
       },
+      element:<Courses></Courses>
+    },
       {
         path:'/statistics',
         element:<Statistics></Statistics>
