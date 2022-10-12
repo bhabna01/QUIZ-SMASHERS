@@ -12,7 +12,7 @@ const Question = ({ question }) => {
     console.log(question);
     console.log(question.correctAnswer);
     const CA=question.correctAnswer
-    const wave = () => toast(`${CA}`)
+    const wave = () => toast(`Answer:${CA}`)
 
 
   
