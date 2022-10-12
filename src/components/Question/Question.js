@@ -7,10 +7,12 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 const Question = ({ question }) => {
-    const wave = () => toast('Hi there')
-    const { options, total } = question;
+   
+    const { options, total,correctAnswer } = question;
     console.log(question);
-    console.log(total);
+    console.log(question.correctAnswer);
+    const CA=question.correctAnswer
+    const wave = () => toast(`${CA}`)
 
 
   
@@ -22,7 +24,7 @@ const Question = ({ question }) => {
           <div className="d-flex question-info" >
           <h4> {ques}</h4> 
           {/*  */}
-          <button onClick={wave}><FontAwesomeIcon  icon={faEye}></FontAwesomeIcon></button>
+          <FontAwesomeIcon onClick={wave} icon={faEye}></FontAwesomeIcon>
           <ToastContainer />
       
             </div>
