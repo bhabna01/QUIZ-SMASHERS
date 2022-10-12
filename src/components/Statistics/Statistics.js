@@ -11,6 +11,7 @@ const Statistics = () => {
     
     return (
         <div style={{ width: '100%', height: 300 }}>
+          <h1 className='mt-5 mb-5 text-center'>Topic vs Total Questions</h1>
         <ResponsiveContainer>
           <AreaChart
             data={data}
