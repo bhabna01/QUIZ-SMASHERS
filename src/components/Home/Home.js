@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import quiz from '../../images/quiz.jpg'
+import quiz from '../../images/exam.webp'
 import { useLoaderData } from 'react-router-dom';
 import Topic from '../Topics/Topic';
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div className='home' >
             
-            <img src={quiz} alt=''></img>
+            <img src={quiz} alt='' ></img>
             <div className='heading'>
                <h1>Participate in quiz</h1> 
                <p>Test Your Limits</p>

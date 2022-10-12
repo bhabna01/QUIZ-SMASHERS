@@ -19,12 +19,12 @@ const Question = ({ question }) => {
   const ques=question.question.replace( /(<([^>]+)>)/ig, '');
   
   return (
-    <div className="container-fluid question w-50 border mb-5" >
+    <div className="container-fluid question w-50 border mb-5 shadow-lg p-3 bg-body rounded" >
       
           <div className="d-flex question-info " >
           <h4> {ques}</h4> 
           {/*  */}
-          <FontAwesomeIcon onClick={wave} icon={faEye} className="cursor"></FontAwesomeIcon>
+          <FontAwesomeIcon onClick={wave} icon={faEye} className="cursor ms-auto"></FontAwesomeIcon>
           <ToastContainer />
       
             </div>

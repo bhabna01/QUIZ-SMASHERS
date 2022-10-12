@@ -10,7 +10,7 @@ const Quizes = () => {
     return (
         <div>
              <h2 className='text-center mb-5 mt-5'>Quiz of {name}</h2>
-            <div className="quiz-container">
+            <div className="quiz-container ">
             {
                 questions.map((question) =><Question question={question} key={question.id}></Question>)
             }

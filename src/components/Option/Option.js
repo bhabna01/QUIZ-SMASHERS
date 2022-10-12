@@ -18,19 +18,14 @@ const Option = ({option,question}) => {
 
     return (
        
-             <div >
+             <div>
             
-                <div className='col'>
-                <p> <input onClick={wave} type="radio" name={question} id={ option} value={ option}/>
-            <label htmlFor={ option}> { option}</label></p>
+                
+                <p><input onClick={wave} type="radio" name={question} id={ option} value={ option}/>
+            <label htmlFor={option} > {option}</label></p>
             <ToastContainer />
-                </div>
-           
-            
-            
-
-          
-        </div>
+                
+           </div>
         
         
         
