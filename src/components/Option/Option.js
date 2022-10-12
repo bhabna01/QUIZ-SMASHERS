@@ -17,13 +17,22 @@ const Option = ({option,question}) => {
 
 
     return (
-        <div ClassName="option">
+       
+             <div >
+            
+                <div className='col'>
+                <p> <input onClick={wave} type="radio" name={question} id={ option} value={ option}/>
+            <label htmlFor={ option}> { option}</label></p>
+            <ToastContainer />
+                </div>
+           
+            
             
 
-           <p> <input onClick={wave} type="radio" name={question} id={ option} value={ option}/>
-            <label for={ option}> { option}</label></p>
-            <ToastContainer />
+          
         </div>
+        
+        
         
     );
 };

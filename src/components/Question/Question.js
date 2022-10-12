@@ -19,19 +19,19 @@ const Question = ({ question }) => {
   const ques=question.question.replace( /(<([^>]+)>)/ig, '');
   
   return (
-    <div className="container question w-50" >
+    <div className="container-fluid question w-50 border mb-5" >
       
-          <div className="d-flex question-info" >
+          <div className="d-flex question-info " >
           <h4> {ques}</h4> 
           {/*  */}
-          <FontAwesomeIcon onClick={wave} icon={faEye}></FontAwesomeIcon>
+          <FontAwesomeIcon onClick={wave} icon={faEye} className="cursor"></FontAwesomeIcon>
           <ToastContainer />
       
             </div>
             
               <div className="option-container">
               {
-                  options.map(option=><Option option={option} question={question}></Option>)
+                  options.map(option=><Option key={option.id} option={option} question={question}></Option>)
               }
              </div>
       </div>

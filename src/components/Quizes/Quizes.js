@@ -9,7 +9,7 @@ const Quizes = () => {
     const { name, questions } = quiz.data;
     return (
         <div>
-             <h2>Quiz of {name}</h2>
+             <h2 className='text-center mb-5 mt-5'>Quiz of {name}</h2>
             <div className="quiz-container">
             {
                 questions.map((question) =><Question question={question} key={question.id}></Question>)
